@@ -234,6 +234,9 @@ endforeach ()
 # All of the game resource files
 set(resources ${data_files} ${support_files})
 
+set (CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed,-shared")
+add_library(moria SHARED ${source_files})
+
 # Also add resources to the target so they are visible in the IDE
 add_executable(umoria ${source_files} ${resources})
 
