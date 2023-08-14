@@ -7,7 +7,7 @@
 
 #include "headers.h"
 
-static void playDungeon();
+extern "C" void playDungeon();
 
 static void initializeCharacterInventory();
 static void initializeMonsterLevels();
@@ -2279,7 +2279,7 @@ static void inventoryRefillLamp() {
 }
 
 // Main procedure for dungeon. -RAK-
-static void playDungeon() {
+extern "C" void playDungeon() {
     // Note: There is a lot of preliminary magic going on here at first
     playerInitializePlayerLight();
     playerUpdateMaxDungeonDepth();

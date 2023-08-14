@@ -51,8 +51,8 @@ extern int eof_flag;
 extern bool panic_save;
 
 // UI - IO
-bool terminalInitialize();
-void terminalRestore();
+extern "C" bool terminalInitialize();
+extern "C" void terminalRestore();
 void terminalSaveScreen();
 void terminalRestoreScreen();
 ssize_t terminalBellSound();

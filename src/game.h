@@ -71,7 +71,7 @@ typedef struct Game_t {
     } screen;
 } Game_t;
 
-extern Game_t game;
+extern "C" Game_t game;
 
 extern int16_t sorted_objects[MAX_DUNGEON_OBJECTS];
 extern uint16_t normal_table[NORMAL_TABLE_SIZE];
@@ -94,8 +94,8 @@ void exitProgram();
 void abortProgram(const char *msg);
 
 // game object management
-int popt();
-void pusht(uint8_t treasure_id);
+extern "C" int popt();
+extern "C" void pusht(uint8_t treasure_id);
 int itemGetRandomObjectId(int level, bool must_be_small);
 
 // game files
